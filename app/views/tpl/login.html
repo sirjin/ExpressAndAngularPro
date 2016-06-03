@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- Bootstrap 3-->
+    <link href="../../styles/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- Template Styles -->
+    <link href="../../styles/style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <form ng-submit="login()" role="form" name="form">
+        <label>用户名：</label>
+        <input type="text" name="username" class="input-lg" ng-model="username" required/>
+        <span ng-show="form.username.$dirty && form.username.$error.requied" class="help-block">用户名不能为空</span>
+        <label>密码: </label>
+        <input type="password" name="password" class="form-control" ng-model="password" required />
+        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">密码不能为空</span>
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-primary">登录</button>
+    </form>
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="../../js/animatescroll.js"></script>
+    <script src="../../js/scripts.js"></script>
+    <script src="../../js/retina.min.js"></script>
+</body>
+</html>
